@@ -1,0 +1,26 @@
+# Datasets - 原始数据通常很大，不建议直接上传到Git仓库
+Dataset/
+# 如果有其他存放大型数据集的文件夹，也请添加
+
+# Model checkpoints and saved models
+checkpoint/
+model/
+*.pth
+*.pt
+
+# Log files and TensorBoard
+log/
+*.event
+runs/
+
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+
+# Output and results folders
+output/
+results/

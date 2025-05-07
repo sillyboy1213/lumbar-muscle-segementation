@@ -1,0 +1,21 @@
+label:
+- color: '#000000'
+  name: __background__
+- color: '#aa0000'
+  name: L1
+- color: '#005500'
+  name: R1
+- color: '#aa007f'
+  name: L2
+- color: '#00557f'
+  name: R2
+- color: '#aa00ff'
+  name: L3
+- color: '#0055ff'
+  name: R3
+- color: '#55ff00'
+  name: L
+- color: '#ffff7f'
+  name: R
+- color: '#aaff00'
+  name: S
