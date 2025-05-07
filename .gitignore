@@ -24,3 +24,12 @@ __pycache__/
 # Output and results folders
 output/
 results/
+
+
+# 忽略主目录下的data文件夹
+data/
+
+# 忽略boundary文件夹下的data、Images和label_png文件夹
+boundary/data/
+boundary/Images/
+boundary/label_png/
