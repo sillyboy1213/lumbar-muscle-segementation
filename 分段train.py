@@ -48,7 +48,7 @@ early_stop__eps = 1e-3  # 早停机制的指标阈值 (当前未使用)
 early_stop_patience = 15  # 早停机制的耐心轮数 (当前未使用)
 initial_lr = 5e-4  # 初始学习率
 threshold_lr = 1e-6  # 早停的学习率阈值 (当前未使用)
-weight_decay = 1e-5  # 优化器的权重衰减系数
+weight_decay = 1e-6  # 优化器的权重衰减系数，学长说weight_decay应该小于学习率至少两个档位
 optimizer_type = 'adam'  # 优化器类型: 'adam' 或 'sgd'
 scheduler_type = 'ReduceLR'  # 学习率调度器类型: 'ReduceLR', 'StepLR', 'poly'
 label_smoothing = 0.01 # 标签平滑系数 (当前未使用)
@@ -178,10 +178,10 @@ def main():
     # 定义学习率衰减策略
     if scheduler_type == 'StepLR':
         # 每隔step_size个epoch，学习率乘以gamma
-        scheduler = lr_scheduler.StepLR(optimizer, step_size=4, gamma=gamma)
+        scheduler = lr_scheduler.StepLR(optimizer, step_size=20, gamma=gamma)
     elif scheduler_type == 'ReduceLR':
         # 当验证集损失在patience个epoch内没有改善时，学习率乘以factor
-        scheduler = lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=5)
+        scheduler = lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=10)
     # elif scheduler_type == 'poly': # PolyLR (当前已注释掉)
     #     scheduler = PolyLR(optimizer, max_iter=n_epoch, power=0.9)
     else:
