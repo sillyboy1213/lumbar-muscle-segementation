@@ -110,7 +110,7 @@ def auto_val(net):
     for (input, mask), file_name in tqdm(val_loader):
         file_name = file_name[0].split('.')[0]
 
-        X = input.cuda()
+        X = input.to('mps' if torch.backends.mps.is_available() else 'cuda' if torch.cuda.is_available() else 'cpu')
         pred,one_hot_mask,activation = net(X)
         pred = torch.sigmoid(pred)
         pred = pred.cpu().detach()

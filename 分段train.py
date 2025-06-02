@@ -67,7 +67,7 @@ if model_type == "unet-pretrained":
 elif model_type == "unet":
     from networks.u_net import Baseline # 使用自定义的U-Net基线模型
 elif model_type == "multitask":
-    from target import MultiTaskUNetWithRegionDetection # 使用自定义的多任务U-Net模型
+    from SAG import MultiTaskUNetWithRegionDetection # 使用自定义的多任务U-Net模型
 
 root_path = './' # 项目根目录
 fold = 1  # 训练集k-fold交叉验证的折数, 可设置1, 2, 3, 4, 5
@@ -112,7 +112,10 @@ def main():
         # 指定预训练权重文件路径
         checkpoint_path = './region_detection_5_classes.pth'
         # 加载权重，map_location确保在没有GPU时也能加载
-        checkpoint = torch.load(checkpoint_path, map_location= 'cuda' if torch.cuda.is_available() else 'cpu')
+        checkpoint = torch.load(
+            checkpoint_path, 
+            map_location='mps' if torch.backends.mps.is_available() else ('cuda' if torch.cuda.is_available() else 'cpu')
+        )
         # 将加载的权重载入到模型的区域检测部分
         net.region_detection.load_state_dict(checkpoint)
         print(f"Loaded pre-trained weights for region_detection from {checkpoint_path}")
@@ -124,7 +127,7 @@ def main():
         print("Froze parameters for region_detection module.")
 
     # 将模型移动到GPU（如果可用），否则使用CPU
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    device = 'mps' if torch.backends.mps.is_available() else ('cuda' if torch.cuda.is_available() else 'cpu')
     net.to(device)
     print(f"Model moved to {device}.")
 
@@ -227,8 +230,8 @@ def train(train_loader, val_loader, net, criterion, optimizer, scheduler, warm_s
         # 遍历训练数据加载器中的每个batch
         for batch, ((input, mask), file_name) in enumerate(train_loader, 1):
             # 将输入数据和掩码移动到指定设备 (GPU或CPU)
-            X = input.to('cuda' if torch.cuda.is_available() else 'cpu')
-            y = mask.to('cuda' if torch.cuda.is_available() else 'cpu')
+            X = input.to('mps' if torch.backends.mps.is_available() else ('cuda' if torch.cuda.is_available() else 'cpu'))
+            y = mask.to('mps' if torch.backends.mps.is_available() else ('cuda' if torch.cuda.is_available() else 'cpu'))
             
             optimizer.zero_grad() # 清空之前的梯度
             # 前向传播，获取模型输出
@@ -301,8 +304,8 @@ def train(train_loader, val_loader, net, criterion, optimizer, scheduler, warm_s
         # 使用tqdm显示验证进度条
         for val_batch, ((input, mask), file_name) in tqdm(enumerate(val_loader, 1)):
             # 将验证数据移动到指定设备
-            val_X = input.to('cuda' if torch.cuda.is_available() else 'cpu')
-            val_y = mask.to('cuda' if torch.cuda.is_available() else 'cpu')
+            val_X = input.to('mps' if torch.backends.mps.is_available() else ('cuda' if torch.cuda.is_available() else 'cpu'))
+            val_y = mask.to('mps' if torch.backends.mps.is_available() else ('cuda' if torch.cuda.is_available() else 'cpu'))
 
             # 前向传播获取预测结果
             pred, one_hot_mask, activation = net(val_X)

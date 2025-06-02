@@ -1,0 +1,15 @@
+{"time":"2025-06-02T14:08:41.250131+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/Users/xiaochen/Desktop/Lumbar for github/wandb/run-20250602_140841-w4fbmr8n/logs/debug-core.log"}
+{"time":"2025-06-02T14:08:44.148544+08:00","level":"INFO","msg":"created new stream","id":"w4fbmr8n"}
+{"time":"2025-06-02T14:08:44.148688+08:00","level":"INFO","msg":"stream: started","id":"w4fbmr8n"}
+{"time":"2025-06-02T14:08:44.148704+08:00","level":"INFO","msg":"handler: started","stream_id":"w4fbmr8n"}
+{"time":"2025-06-02T14:08:44.148734+08:00","level":"INFO","msg":"sender: started","stream_id":"w4fbmr8n"}
+{"time":"2025-06-02T14:08:44.148819+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"w4fbmr8n"}
+{"time":"2025-06-02T14:08:44.664006+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-02T14:29:49.92774+08:00","level":"INFO","msg":"stream: closing","id":"w4fbmr8n"}
+{"time":"2025-06-02T14:29:49.928622+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-02T14:29:49.929031+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-02T14:29:53.484418+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-02T14:29:59.075202+08:00","level":"INFO","msg":"handler: closed","stream_id":"w4fbmr8n"}
+{"time":"2025-06-02T14:29:59.075299+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"w4fbmr8n"}
+{"time":"2025-06-02T14:29:59.075243+08:00","level":"INFO","msg":"sender: closed","stream_id":"w4fbmr8n"}
+{"time":"2025-06-02T14:29:59.075469+08:00","level":"INFO","msg":"stream: closed","id":"w4fbmr8n"}

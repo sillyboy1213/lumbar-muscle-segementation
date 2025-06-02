@@ -1,0 +1,24 @@
+2025-06-02 14:08:41,205 INFO    MainThread:5202 [wandb_setup.py:_flush():70] Current SDK version is 0.19.11
+2025-06-02 14:08:41,205 INFO    MainThread:5202 [wandb_setup.py:_flush():70] Configure stats pid to 5202
+2025-06-02 14:08:41,205 INFO    MainThread:5202 [wandb_setup.py:_flush():70] Loading settings from /Users/xiaochen/.config/wandb/settings
+2025-06-02 14:08:41,205 INFO    MainThread:5202 [wandb_setup.py:_flush():70] Loading settings from /Users/xiaochen/Desktop/Lumbar for github/wandb/settings
+2025-06-02 14:08:41,205 INFO    MainThread:5202 [wandb_setup.py:_flush():70] Loading settings from environment variables
+2025-06-02 14:08:41,206 INFO    MainThread:5202 [wandb_init.py:setup_run_log_directory():724] Logging user logs to /Users/xiaochen/Desktop/Lumbar for github/wandb/run-20250602_140841-w4fbmr8n/logs/debug.log
+2025-06-02 14:08:41,206 INFO    MainThread:5202 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to /Users/xiaochen/Desktop/Lumbar for github/wandb/run-20250602_140841-w4fbmr8n/logs/debug-internal.log
+2025-06-02 14:08:41,206 INFO    MainThread:5202 [wandb_init.py:init():852] calling init triggers
+2025-06-02 14:08:41,206 INFO    MainThread:5202 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'crop_size': 256, 'batch_size': 2, 'n_epoch': 100, 'initial_lr': 0.0005, 'threshold_lr': 1e-06, 'weight_decay': 1e-06, 'optimizer_type': 'adam', 'scheduler_type': 'ReduceLR', 'label_smoothing': 0.01, 'aux_loss': False, 'gamma': 0.5, 'alpha': 0.85, 'num_classes': 6, 'model_type': 'multitask', 'fold': 1, 'depth': 2, 'loss_name': 'mix', 'reduction': '', 'enc_final_channels': 512, 'model_script_name': 'multitask_depth=2_fold_1_mix_489545_numsclass_6', '_wandb': {}}
+2025-06-02 14:08:41,206 INFO    MainThread:5202 [wandb_init.py:init():893] starting backend
+2025-06-02 14:08:41,206 INFO    MainThread:5202 [wandb_init.py:init():897] sending inform_init request
+2025-06-02 14:08:41,248 INFO    MainThread:5202 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2025-06-02 14:08:41,248 INFO    MainThread:5202 [wandb_init.py:init():907] backend started and connected
+2025-06-02 14:08:41,251 INFO    MainThread:5202 [wandb_init.py:init():1005] updated telemetry
+2025-06-02 14:08:41,269 INFO    MainThread:5202 [wandb_init.py:init():1029] communicating run to backend with 90.0 second timeout
+2025-06-02 14:08:44,659 INFO    MainThread:5202 [wandb_init.py:init():1104] starting run threads in backend
+2025-06-02 14:08:44,718 INFO    MainThread:5202 [wandb_run.py:_console_start():2573] atexit reg
+2025-06-02 14:08:44,718 INFO    MainThread:5202 [wandb_run.py:_redirect():2421] redirect: wrap_raw
+2025-06-02 14:08:44,718 INFO    MainThread:5202 [wandb_run.py:_redirect():2490] Wrapping output streams.
+2025-06-02 14:08:44,718 INFO    MainThread:5202 [wandb_run.py:_redirect():2513] Redirects installed.
+2025-06-02 14:08:44,720 INFO    MainThread:5202 [wandb_init.py:init():1150] run started, returning control to user process
+2025-06-02 14:08:45,164 INFO    MainThread:5202 [wandb_watch.py:_watch():71] Watching
+2025-06-02 14:29:49,921 INFO    MsgRouterThr:5202 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

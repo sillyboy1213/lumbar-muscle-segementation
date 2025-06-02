@@ -1,0 +1,13 @@
+Loaded pre-trained weights for region_detection from ./region_detection_5_classes.pth
+Froze parameters for region_detection module.
+Model moved to mps.
+/opt/anaconda3/envs/lumbar/lib/python3.10/site-packages/torch/nn/_reduction.py:51: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+Optimizer: AdamW, Initial LR: 0.0005, Weight Decay: 1e-06
+Number of trainable parameters: 36069184
+Traceback (most recent call last):
+  File "/Users/xiaochen/Desktop/Lumbar for github/SAG训练.py", line 355, in <module>
+    main()
+  File "/Users/xiaochen/Desktop/Lumbar for github/SAG训练.py", line 185, in main
+    scheduler = lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=10, verbose=True)
+TypeError: ReduceLROnPlateau.__init__() got an unexpected keyword argument 'verbose'

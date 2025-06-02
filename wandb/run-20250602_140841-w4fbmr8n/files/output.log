@@ -1,0 +1,80 @@
+Loaded pre-trained weights for region_detection from ./region_detection_5_classes.pth
+Froze parameters for region_detection module.
+Model moved to mps.
+/opt/anaconda3/envs/lumbar/lib/python3.10/site-packages/torch/nn/_reduction.py:51: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+Optimizer: AdamW, Initial LR: 0.0005, Weight Decay: 1e-06
+Number of trainable parameters: 36069184
+Learning rate scheduler: ReduceLR
+Epoch: 1/100 - Batch: 33/67 - Iter: 33 - Loss: 1.6787 - MeanDice: 0.0773 - Time: 51.53s
+Epoch: 1/100 - Batch: 66/67 - Iter: 66 - Loss: 1.6439 - MeanDice: 0.0824 - Time: 55.47s
+Epoch: 1/100 - Batch: 67/67 - Iter: 67 - Loss: 1.6463 - MeanDice: 0.0777 - Time: 1.88s
+Epoch 1/100 Summary (Train): Loss: 1.6810, MeanDice: 0.0825
+Train Dices: L3: 0.0438 R3: 0.0385 S: 0.0896 L: 0.1176 R: 0.1228
+Epoch 1 Val: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 34/34 [00:13<00:00,  2.49it/s]
+Epoch 1/100 Summary (Val): Loss: 1.6651, MeanDice: 0.0886
+Val Dices: L3: 0.0538 R3: 0.0455 S: 0.0936 L: 0.1233 R: 0.1267
+Epoch 1 completed in 122.64s. LR: 5.00e-04
+Epoch: 2/100 - Batch: 33/67 - Iter: 100 - Loss: 1.6219 - MeanDice: 0.0788 - Time: 113.29s
+Epoch: 2/100 - Batch: 66/67 - Iter: 133 - Loss: 1.6085 - MeanDice: 0.0846 - Time: 84.13s
+Epoch: 2/100 - Batch: 67/67 - Iter: 134 - Loss: 1.5870 - MeanDice: 0.0987 - Time: 2.27s
+Epoch 2/100 Summary (Train): Loss: 1.6146, MeanDice: 0.0886
+Train Dices: L3: 0.0466 R3: 0.0428 S: 0.0988 L: 0.1257 R: 0.1290
+Epoch 2 Val: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 34/34 [00:15<00:00,  2.23it/s]
+Epoch 2/100 Summary (Val): Loss: 1.6000, MeanDice: 0.0923
+Val Dices: L3: 0.0582 R3: 0.0521 S: 0.0985 L: 0.1213 R: 0.1316
+Epoch 2 completed in 214.99s. LR: 5.00e-04
+Epoch: 3/100 - Batch: 33/67 - Iter: 167 - Loss: 1.5851 - MeanDice: 0.0871 - Time: 79.66s
+Epoch: 3/100 - Batch: 66/67 - Iter: 200 - Loss: 1.5549 - MeanDice: 0.1064 - Time: 80.40s
+Epoch: 3/100 - Batch: 67/67 - Iter: 201 - Loss: 1.5736 - MeanDice: 0.0876 - Time: 2.87s
+Epoch 3/100 Summary (Train): Loss: 1.5804, MeanDice: 0.0923
+Train Dices: L3: 0.0485 R3: 0.0475 S: 0.1015 L: 0.1308 R: 0.1333
+Epoch 3 Val: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 34/34 [00:15<00:00,  2.19it/s]
+Epoch 3/100 Summary (Val): Loss: 1.5736, MeanDice: 0.0976
+Val Dices: L3: 0.0562 R3: 0.0571 S: 0.1004 L: 0.1389 R: 0.1356
+Epoch 3 completed in 178.50s. LR: 5.00e-04
+Epoch: 4/100 - Batch: 33/67 - Iter: 234 - Loss: 1.5769 - MeanDice: 0.0877 - Time: 79.75s
+Epoch: 4/100 - Batch: 66/67 - Iter: 267 - Loss: 1.5567 - MeanDice: 0.0963 - Time: 78.33s
+Epoch: 4/100 - Batch: 67/67 - Iter: 268 - Loss: 1.5478 - MeanDice: 0.1041 - Time: 2.46s
+Epoch 4/100 Summary (Train): Loss: 1.5615, MeanDice: 0.0949
+Train Dices: L3: 0.0502 R3: 0.0498 S: 0.1042 L: 0.1342 R: 0.1361
+Epoch 4 Val: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 34/34 [00:15<00:00,  2.21it/s]
+Epoch 4/100 Summary (Val): Loss: 1.5556, MeanDice: 0.0993
+Val Dices: L3: 0.0596 R3: 0.0591 S: 0.1014 L: 0.1396 R: 0.1369
+Epoch 4 completed in 175.92s. LR: 5.00e-04
+Epoch: 5/100 - Batch: 33/67 - Iter: 301 - Loss: 1.5390 - MeanDice: 0.1100 - Time: 72.96s
+Epoch: 5/100 - Batch: 66/67 - Iter: 334 - Loss: 1.5509 - MeanDice: 0.0937 - Time: 66.39s
+Epoch: 5/100 - Batch: 67/67 - Iter: 335 - Loss: 1.5572 - MeanDice: 0.0867 - Time: 2.10s
+Epoch 5/100 Summary (Train): Loss: 1.5530, MeanDice: 0.0958
+Train Dices: L3: 0.0508 R3: 0.0504 S: 0.1053 L: 0.1352 R: 0.1375
+Epoch 5 Val: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 34/34 [00:13<00:00,  2.57it/s]
+Epoch 5/100 Summary (Val): Loss: 1.5444, MeanDice: 0.1005
+Val Dices: L3: 0.0578 R3: 0.0583 S: 0.1030 L: 0.1413 R: 0.1419
+Epoch 5 completed in 154.70s. LR: 5.00e-04
+Epoch: 6/100 - Batch: 33/67 - Iter: 368 - Loss: 1.5616 - MeanDice: 0.0799 - Time: 67.61s
+Epoch: 6/100 - Batch: 66/67 - Iter: 401 - Loss: 1.5390 - MeanDice: 0.1027 - Time: 67.64s
+Epoch: 6/100 - Batch: 67/67 - Iter: 402 - Loss: 1.5147 - MeanDice: 0.1257 - Time: 2.16s
+Epoch 6/100 Summary (Train): Loss: 1.5469, MeanDice: 0.0969
+Train Dices: L3: 0.0513 R3: 0.0509 S: 0.1059 L: 0.1372 R: 0.1391
+Epoch 6 Val: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 34/34 [00:13<00:00,  2.50it/s]
+Epoch 6/100 Summary (Val): Loss: 1.5427, MeanDice: 0.1018
+Val Dices: L3: 0.0610 R3: 0.0607 S: 0.1035 L: 0.1433 R: 0.1406
+Epoch 6 completed in 151.03s. LR: 5.00e-04
+Epoch: 7/100 - Batch: 33/67 - Iter: 435 - Loss: 1.5507 - MeanDice: 0.0887 - Time: 68.58s
+Epoch: 7/100 - Batch: 66/67 - Iter: 468 - Loss: 1.5214 - MeanDice: 0.1180 - Time: 68.37s
+Epoch: 7/100 - Batch: 67/67 - Iter: 469 - Loss: 1.5598 - MeanDice: 0.0805 - Time: 2.04s
+Epoch 7/100 Summary (Train): Loss: 1.5442, MeanDice: 0.0971
+Train Dices: L3: 0.0515 R3: 0.0512 S: 0.1066 L: 0.1369 R: 0.1395
+Epoch 7 Val: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 34/34 [00:13<00:00,  2.47it/s]
+Epoch 7/100 Summary (Val): Loss: 1.5502, MeanDice: 0.0973
+Val Dices: L3: 0.0563 R3: 0.0555 S: 0.0973 L: 0.1361 R: 0.1411
+Epoch 7 completed in 152.74s. LR: 5.00e-04
+Epoch: 8/100 - Batch: 33/67 - Iter: 502 - Loss: 1.5533 - MeanDice: 0.0870 - Time: 76.38s
+Traceback (most recent call last):
+  File "/Users/xiaochen/Desktop/Lumbar for github/SAG训练.py", line 355, in <module>
+    main()
+  File "/Users/xiaochen/Desktop/Lumbar for github/SAG训练.py", line 194, in main
+    train(train_loader, val_loader, net, criterion, optimizer, scheduler, None, n_epoch, 0)
+  File "/Users/xiaochen/Desktop/Lumbar for github/SAG训练.py", line 243, in train
+    train_losses_epoch.append(loss.item())
+KeyboardInterrupt
